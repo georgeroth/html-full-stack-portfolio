@@ -4,6 +4,27 @@
     font-family: sans-serif;
 }
 
+h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 100px;
+    color: #1d313a;
+    
+}
+
+h2 {
+    margin-top:  25px; 
+    margin-bottom: 25px;
+}
+
+p, li {
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+/* HEADER SECTION */
+
 .header {
     display: grid;
     grid-template: 
@@ -47,7 +68,7 @@ nav {
     display: inline-block;
     text-align: center;
     padding: 10px;
-    width: 100px;
+    width: 120px;
     background-color: #ffffffe0;
     border-radius: 5px;
     color: #4eb6ac;
@@ -64,13 +85,16 @@ nav {
 .main {
     padding: 100px 0;
     margin: 0 auto;
-    width: 700px;
+    max-width: 700px;
 }
 
 .main h1 {
+    padding-top: 0;
     color: #ffffffe0;
-    font-size: 7em;
+    font-size: 7vw;
     margin-bottom: 20px;
+    text-transform: initial;
+    text-align: left;
 }
 
 .main p {
@@ -89,7 +113,7 @@ nav {
     text-decoration-color: #1d313a;
 }
 
-/* ABOUT ME */
+/* ABOUT ME SECTION */
 
 .about-container, .experience-container {
     border-top: 5px solid #1d313a;
@@ -97,24 +121,9 @@ nav {
     
 .about, .experience {
     margin: 0 auto;
-    width: 700px;
+    max-width: 700px;
 }
-.about h1, .experience h1, .portfolio-title h1 {
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 100px;
-    color: #1d313a;
-    
-}
-.about h2, .experience h2 {
-    margin-top:  25px; 
-    margin-bottom: 25px;
-}
-.about p, .about li, .experience p {
-    font-size: 1.3em;
-    line-height: 1.5em;
-}
+
 .skills-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -122,50 +131,55 @@ nav {
     margin-left: 40px;
 
 }
-.portfolio-container{
+
+/* PORTFOLIO SECTION */
+
+.portfolio-container {
     border-top: solid #1d313a 5px; 
     background-color:#ffebee;
-    display:grid;
-    grid-template:
-        "portfolio-title portfolio-title portfolio-title portfolio-title portfolio-title" 150px 
-        "portfolio-left portfolio-element-1 portfolio-element-2 portfolio-element-3 portfolio-right" auto /
-        1fr 300px 300px 300px 1fr;
 }
+
 .portfolio-title {
-    grid-area: portfolio-title;
     text-align: center;
-   
 }
 
 .portfolio-title h1 {
-    padding-top: 80px;
+    padding: 80px 0 50px 0;
 }
-.portfolio-element-1,.portfolio-element-2,.portfolio-element-3{
-    
+
+.portfolio-elements {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 333px);
+    place-content: center;
+}
+
+.portfolio-elements p {
+    font-size: 1.2em
+}
+
+.portfolio-element-1, .portfolio-element-2, .portfolio-element-3 {
     border: solid #ae1457  5px ;
-    margin: 20px ;
+    margin: 15px ;
     padding: 30px ;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: white;
     margin-bottom: 80px;
+    box-shadow: 0px 0px 10px #00000055;
 }
-.portfolio-element-1{
-    grid-area: portfolio-element-1;
+
+.portfolio-container h2 {
+    margin-top: 10px;
 }
-.portfolio-element-2{
-    grid-area: portfolio-element-2;
-}
-.portfolio-element-3{
-    grid-area: portfolio-element-3;
-}
-.read-more{
-    border: radius 5px;
+
+.read-more {
+    border-radius: 5px;
     display: block;
     background-color: #ae1457;
     color: white;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 7px 0;
     font-size: 0.9em;
     text-transform: uppercase;
     text-decoration: none;
@@ -173,18 +187,20 @@ nav {
     margin-top: 30px;
 }
 
-.repo{
+.repo {
     text-align: center;
     color: #ae1457;
     display: block;
     font-size: 0.7em;
+    font-weight: bold;
+    margin-top: 10px;
 }
+
 .experience-container {
     border-top: solid #1d313a 5px; 
-
 }
 
-/* FOOTER */
+/* FOOTER SECTION */
 
 .footer-container {
     background-color: #1d313a;
@@ -197,4 +213,41 @@ nav {
 .footer {
     color: white;
     padding-left: 20px;
+}
+
+@media screen and (min-width: 1520px) {
+    .main h1 {
+        font-size: 7em;
+    }
+}
+
+@media screen and (max-width: 831px) {
+    .main, .about, .experience {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .header {
+        grid-template: 
+            "title" 80px
+            "menu"  80px /
+            1fr ;
+
+        place-items: center;
+    }
+
+    .main h1 {
+        font-size: 9vw;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .menu a {
+        font-size: 3vw;
+        width: 20vw;
+    }
+
+    .main h1 {
+        font-size: 12vw;
+    }
 }
