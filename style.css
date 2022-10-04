@@ -88,31 +88,34 @@ nav {
     text-decoration: underline;
     text-decoration-color: #1d313a;
 }
-.about-container {
+
+/* ABOUT ME */
+
+.about-container, .experience-container {
     border-top: 5px solid #1d313a;
 }
     
-.about{
+.about, .experience {
     margin: 0 auto;
     width: 700px;
 }
-.about h1{
+.about h1, .experience h1, .portfolio-title h1 {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
     color: #1d313a;
     
 }
-.about h2{
+.about h2, .experience h2 {
     margin-top:  25px; 
     margin-bottom: 25px;
 }
-.about p, .about li{
+.about p, .about li, .experience p {
     font-size: 1.3em;
     line-height: 1.5em;
 }
-.skills-list{
+.skills-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 100px; 
@@ -124,14 +127,18 @@ nav {
     background-color:#ffebee;
     display:grid;
     grid-template:
-        "portfolio-title portfolio-title portfolio-title portfolio-title portfolio-title" 50px 
+        "portfolio-title portfolio-title portfolio-title portfolio-title portfolio-title" 150px 
         "portfolio-left portfolio-element-1 portfolio-element-2 portfolio-element-3 portfolio-right" auto /
         1fr 300px 300px 300px 1fr;
 }
-.portfolio-title{
+.portfolio-title {
     grid-area: portfolio-title;
     text-align: center;
    
+}
+
+.portfolio-title h1 {
+    padding-top: 80px;
 }
 .portfolio-element-1,.portfolio-element-2,.portfolio-element-3{
     
@@ -140,7 +147,7 @@ nav {
     padding: 30px ;
     border-radius: 15px;
     background-color: white;
-    margin-bottom: 50px-;
+    margin-bottom: 80px;
 }
 .portfolio-element-1{
     grid-area: portfolio-element-1;
@@ -172,7 +179,22 @@ nav {
     display: block;
     font-size: 0.7em;
 }
-.experience-container{
+.experience-container {
     border-top: solid #1d313a 5px; 
 
+}
+
+/* FOOTER */
+
+.footer-container {
+    background-color: #1d313a;
+    height: 60px;
+    margin-top: 100px;
+    display: grid;
+    place-items: center start ;
+}
+
+.footer {
+    color: white;
+    padding-left: 20px;
 }
