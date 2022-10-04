@@ -11,7 +11,7 @@
         1fr auto;
 
     background-color: #4eb6ac;
-    border-top: 5px solid black
+    border-top: 5px solid #1d313a;
 }
 
 .title {
@@ -80,11 +80,99 @@ nav {
 }
 
 .black-text {
-    color: #000;
+    color: #1d313a;
     font-weight: bold;
 }
 
 .main em {
     text-decoration: underline;
-    text-decoration-color: black;
+    text-decoration-color: #1d313a;
+}
+.about-container {
+    border-top: 5px solid #1d313a;
+}
+    
+.about{
+    margin: 0 auto;
+    width: 700px;
+}
+.about h1{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 50px;
+    color: #1d313a;
+    
+}
+.about h2{
+    margin-top:  25px; 
+    margin-bottom: 25px;
+}
+.about p, .about li{
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+.skills-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 100px; 
+    margin-left: 40px;
+
+}
+.portfolio-container{
+    border-top: solid #1d313a 5px; 
+    background-color:#ffebee;
+    display:grid;
+    grid-template:
+        "portfolio-title portfolio-title portfolio-title portfolio-title portfolio-title" 50px 
+        "portfolio-left portfolio-element-1 portfolio-element-2 portfolio-element-3 portfolio-right" auto /
+        1fr 300px 300px 300px 1fr;
+}
+.portfolio-title{
+    grid-area: portfolio-title;
+    text-align: center;
+   
+}
+.portfolio-element-1,.portfolio-element-2,.portfolio-element-3{
+    
+    border: solid #ae1457  5px ;
+    margin: 20px ;
+    padding: 30px ;
+    border-radius: 15px;
+    background-color: white;
+    margin-bottom: 50px-;
+}
+.portfolio-element-1{
+    grid-area: portfolio-element-1;
+}
+.portfolio-element-2{
+    grid-area: portfolio-element-2;
+}
+.portfolio-element-3{
+    grid-area: portfolio-element-3;
+}
+.read-more{
+    border: radius 5px;
+    display: block;
+    background-color: #ae1457;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.repo{
+    text-align: center;
+    color: #ae1457;
+    display: block;
+    font-size: 0.7em;
+}
+.experience-container{
+    border-top: solid #1d313a 5px; 
+
 }
